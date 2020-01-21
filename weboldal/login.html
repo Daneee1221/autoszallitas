@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<script>
+    window.onload=function(){
+        document.querySelector("#login").addEventListener("click",login)
+    }
+
+    function login(e)
+    {
+        e.preventDefault()
+        var php = new XMLHttpRequest()
+        php.onreadystatechange = function(){
+            if(this.status===200 && this.readyState===4){
+                    alert(this.response)
+                    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+                    var errorCode = error.code;
+                    console.log(error.Message);
+
+                    });
+                    window.location.href = 'main.php';
+            }
+        }
+
+        php.open("GET",`login.php?email=${document.querySelector("#email").value}&password=${document.querySelector("#password").value}`,true)
+        php.send()
+    }
+
+</script>
+</head>
+
+<body>
+    <form class="box" action="login.html" method="post">
+        <p class="logtext">Bejelentkezés</p>
+        <input type="email" id="email" placeholder="Email"> 
+        <input type="password" id="password" placeholder="Jelszó">
+        <a class="href" href="index.php">Nincs még fiókod? Regisztrálj egyet!</a>
+        <input type="submit" id="login" value="Bejelentkezés">
+    </form>    
+</body>
+
+
+</html>

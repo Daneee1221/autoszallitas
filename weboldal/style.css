@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url("../images/overlay.png"), url("../images/indeximg.jpg");
+}
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 40px;
+    margin-right: 350px;
+}
+ul li{
+    display: inline-block;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+    border: 1px solid white;
+}
+ul li a:hover{
+    background-color: white;
+    color:black;
+    transition: all 0.3s ease-in;
+}
+
+.box{
+    width: 300px;
+    padding: 40px;
+    width: 20%;
+    padding: 3%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #191919;
+    text-align: center;
+}
+
+.box h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+
+}
+
+.box input[type = "email"],.box input[type = "password"],.box input[type = "text"]{
+border:0;
+background: none;
+display: block;
+margin: 20px auto;
+text-align: center;
+border: 2px solid #3498db;
+padding: 14px 10px;
+width:200px;
+outline: none;
+color: white;
+border-radius: 24px;
+transition: 0.25s;
+}
+.box input[type = "email"]:focus,.box input[type = "password"]:focus,.box input[type = "text"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
+    
+}
+.box input[type = "submit"]{
+border:0;
+background: none;
+display: block;
+margin: 20px auto;
+text-align: center;
+border: 2px solid #2ecc71;
+padding: 14px 40px;
+outline: none;
+color: grey;
+border-radius: 24px;
+transition: 0.25s;
+cursor:pointer;
+}
+.box input[type = "submit"]:hover{
+background: #2ecc71;
+color: white;
+}
+.regtext , .logtext
+{
+    font-size: 220%;
+    color: white;
+}
+.href
+{
+    color: lightblue;
+}
+.box2{
+    width: 12%;
+    padding: 2%;
+    position: relative;
+    float: right;
+    top: 15%;
+    left: 53%;
+    transform: translate(-50%,-50%);
+    background: #191919;
+    text-align: center;
+    margin-right: 2%;
+}
+.box2 input[type = "submit"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid red;
+    padding: 14px 40px;
+    outline: none;
+    color: grey;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor:pointer;
+    }
+.box2 input[type = "submit"]:hover{
+background: red;
+color: white;
+}
+.loggedtext
+{
+    font-size: 150%;
+    color: white;
+}
+#logout{
+    font-size: 120%;
+}

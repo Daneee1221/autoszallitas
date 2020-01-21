@@ -1,0 +1,41 @@
+<!--<script type="text/javascript" src="js/read.js">
+    function adnev(value){
+    var userId = firebase.auth().currentUser.uid;
+    return firebase.database().ref('/felhasznalok/' + userId).once('value').then(function(snapshot) {
+        var nev = (snapshot.val() && snapshot.val().nev) || 'Anonymous';
+      });
+    }
+    function getdata()
+    {
+        firebase.auth().onAuthStateChanged(user => {
+            if (user) {
+                getUserData(id=user.uid)
+            }
+        })
+    }
+    function getUserData(id) {
+    firebase.database().ref('felhasznalok/' + id).once("value", snap => {
+        var nev2= console.log(snap.val())
+        })
+    }
+    </script>
+
+    <?php
+    /*include("db.php");
+    $ref = "felhasznalok";
+    $data = $database->getReference($ref)->getValue();
+    $i = 0;
+    foreach($data as $key => $data1){
+        $i++;
+    }*/
+    ?>
+
+    /*$firestore->getmyuid();
+    $authToken = $firestore->authenticator()->getAuthToken();
+    $document = new FirestoreDocument;
+    $currid = new FirestoreDocument;
+    $currid = $firestore->get('id')->parseValue();
+    while($currid==$authToken)
+    {
+        $document= $firestore->get('nev')->parseValue();
+    }*/

@@ -1,0 +1,7 @@
+{
+    "require": {
+        "kreait/firebase-php": "^4.38",
+        "grpc/grpc": "^v1.1.0",
+        "ahsankhatri/firestore-php": "^2.0"
+    }
+}
